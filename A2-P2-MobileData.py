@@ -10,13 +10,25 @@
 
 def main():
     # YOUR CODE STARTS HERE, each line must be indented (one tab)
+    #INPUT - Data Usage
+    usage = int(input("Enter data usage: "))
 
+    #CALCULATE + OUTPUT: Calculate rate of charge and output total charge
+    if usage <= 200:
+        flat_rate = 20
+        print("Total charge is: ${0:.2f}".format(flat_rate))
+    
+    elif usage > 200 and usage <= 500:
+        per_Mb = usage * 0.105
+        print("Total charge is: $ {0:.2f}".format(per_Mb))
 
+    elif usage > 500 and usage <= 1000:
+        per_Mb = usage * 0.110
+        print("Total charge is: ${0:.2f}".format(per_Mb))
 
-
-
-
-
+    else:
+        flat_rate = 118
+        print("Total charge is: ${0:.2f}".format(flat_rate))
 
     # YOUR CODE ENDS HERE
 
